@@ -108,6 +108,7 @@ function ippAlignPtr(ptr:Pointer;alignBytes: Integer ):Pointer;stdcall;
 *)
 
 function ippMalloc(length: Integer): Pointer; stdcall;
+function ippMalloc_L(length: NativeInt): Pointer; stdcall;
 
 {LINE 159}
 (* /////////////////////////////////////////////////////////////////////////////
@@ -181,6 +182,7 @@ function ippGetCpuFreqMhz(pMhz: PInteger):IppStatus; stdcall;
 //
 *)
 function ippGetMaxCacheSizeB(var SizeByte:Integer):IppStatus; stdcall;
+{LINE 298}
 
 {LINE 330}
 (*
@@ -243,6 +245,7 @@ function ippSetFlushToZero; external ippcorelib delayed;
 function ippSetDenormAreZeros; external ippcorelib delayed;
 function ippAlignPtr; external ippcorelib delayed;
 function ippMalloc; external ippcorelib delayed;
+function ippMalloc_L; external ippcorelib delayed;
 procedure ippFree; external ippcorelib delayed;
 function ippInit; external ippcorelib delayed;
 function ippGetCpuFreqMhz; external ippcorelib delayed;
