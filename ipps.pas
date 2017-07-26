@@ -130,8 +130,10 @@ function ippsMove_8u(const pSrc:PIpp8u; pDst:PIpp8u; len: Integer):IppStatus std
 *)
 function ippsZero_8u(pDst: PIpp8u; len: integer ):IppStatus stdcall;
 
-function ippsSwapBytes_64u(const pSrc:PIpp64u; pDst:PIpp64u; len: Integer):IppStatus stdcall;
-//function ippsSwapBytes_64u(pSrc,pDst:Pointer;len:integer):Integer stdcall;external 'Barcode.dll';
+function ippsSwapBytes_16u(const pSrc: PIpp16u; pDst: PIpp16u; len: Integer):IppStatus stdcall;
+function ippsSwapBytes_24u(const pSrc: PIpp8u;  pDst: PIpp8u;  len: Integer):IppStatus stdcall;
+function ippsSwapBytes_32u(const pSrc: PIpp32u; pDst: PIpp32u; len: Integer):IppStatus stdcall;
+function ippsSwapBytes_64u(const pSrc: PIpp64u; pDst: PIpp64u; len: Integer):IppStatus stdcall;
 
 
 
@@ -166,6 +168,9 @@ function ippsCopy_8u;external ippslib {$ifdef MSWindows}delayed{$endif};
 function ippsMove_8u;external ippslib {$ifdef MSWindows}delayed{$endif};
 function ippsZero_8u;external ippslib {$ifdef MSWindows}delayed{$endif};
 
+function ippsSwapBytes_16u;external ippslib {$ifdef MSWindows}delayed{$endif};
+function ippsSwapBytes_24u;external ippslib {$ifdef MSWindows}delayed{$endif};
+function ippsSwapBytes_32u;external ippslib {$ifdef MSWindows}delayed{$endif};
 function ippsSwapBytes_64u;external ippslib {$ifdef MSWindows}delayed{$endif};
 
 
